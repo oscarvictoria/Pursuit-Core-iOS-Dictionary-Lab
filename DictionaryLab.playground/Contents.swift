@@ -12,26 +12,32 @@ var applesDict: [String: Int] = ["Adam": 3,
 
 // a. Set eveAppleCount equal to the number of apples that Eve has
 
-let eveAppleCount: Int = /*Your code here (Replace -1 with your solution)*/ -1
-//assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
+let eveAppleCount: Int = applesDict["Eve"] ?? -1
+assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
 
-// b. Change the number of apples that Adam  has to 4
+// b. Change the number of apples that Adam has to 4
+
+applesDict["Adam"] = 4
 
 // Your code here
-//assert(applesDict["Adam"] == 4, "Was expecting 4, but got \(String(describing: applesDict["Adam"]))")
+assert(applesDict["Adam"] == 4, "Was expecting 4, but got \(String(describing: applesDict["Adam"]))")
 
 // c. Set calAndDanAppleCount equal to the sum of both of those
 
-let calAndDanAppleCount = /*Your code here (Replace -1 with your solution)*/ -1
-//assert(calAndDanAppleCount == 8, "Was expecting 8, but got \(calAndDanAppleCount)")
+let calAndDanAppleCount = applesDict["Cal"]! + applesDict["Dan"]!
+assert(calAndDanAppleCount == 8, "Was expecting 8, but got \(calAndDanAppleCount)")
 
 // d. Set all the values in applesDict to 0
+applesDict["Adam"] = 0
+applesDict["Beth"] = 0
+applesDict["Cal"] = 0
+applesDict["Dan"] = 0
+applesDict["Eve"] = 0
 
-// Your code here
 
-//for (_, value) in applesDict {
-//    assert(value == 0, "Was expecting 0, but got \(value)")
-//}
+for (_, value) in applesDict {
+    assert(value == 0, "Was expecting 0, but got \(value)")
+}
 
 // Question Two
 
@@ -41,12 +47,12 @@ var citiesDict: [String: String] = ["Afghanistan": "Kabul",
 
 // a. Set russiaCapital equal to Russia's capital using citiesDict
 
-let russiaCapital = /* Your code here (Replace "" with your solution)*/ ""
-//assert(russiaCapital == "Moscow", "Was expecting Moscow, but got \(russiaCapital)")
+let russiaCapital = citiesDict["Russia"] ?? "Moscow" /* Your code here (Replace "" with your solution)*/
+assert(russiaCapital == "Moscow", "Was expecting Moscow, but got \(russiaCapital)")
     
 // b. Add a new key value pair "Jamaica" and its capital "Kingston"
-
-// Your code here
+  
+//
 
 //assert(citiesDict["Jamaica"] == "Kingston", "Was expecting Kingston, but got \(String(describing: citiesDict["Jamaica"]))")
 
