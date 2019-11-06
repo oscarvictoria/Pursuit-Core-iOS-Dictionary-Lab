@@ -12,14 +12,17 @@ var applesDict: [String: Int] = ["Adam": 3,
 
 // a. Set eveAppleCount equal to the number of apples that Eve has
 
-let eveAppleCount: Int = applesDict["Eve"] ?? -1
+let eveAppleCount = applesDict["Eve"] ?? 0
 assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
 
 // b. Change the number of apples that Adam has to 4
 
-applesDict["Adam"] = 4
 
 // Your code here
+
+applesDict["Adam"] = 4
+
+
 assert(applesDict["Adam"] == 4, "Was expecting 4, but got \(String(describing: applesDict["Adam"]))")
 
 // c. Set calAndDanAppleCount equal to the sum of both of those
@@ -47,20 +50,22 @@ var citiesDict: [String: String] = ["Afghanistan": "Kabul",
 
 // a. Set russiaCapital equal to Russia's capital using citiesDict
 
-let russiaCapital = citiesDict["Russia"] ?? "Moscow" /* Your code here (Replace "" with your solution)*/
+let russiaCapital = citiesDict["Russia"] ?? "" /* Your code here (Replace "" with your solution)*/
 assert(russiaCapital == "Moscow", "Was expecting Moscow, but got \(russiaCapital)")
     
 // b. Add a new key value pair "Jamaica" and its capital "Kingston"
   
-//
+citiesDict = ["Jamaica":"Kingston"]
 
-//assert(citiesDict["Jamaica"] == "Kingston", "Was expecting Kingston, but got \(String(describing: citiesDict["Jamaica"]))")
+assert(citiesDict["Jamaica"] == "Kingston", "Was expecting Kingston, but got \(String(describing: citiesDict["Jamaica"]))")
 
 // c. Add a new key value pair "Indonesia" and its capital "Jakarta"
 
 // Your code here
 
-//assert(citiesDict["Indonesia"] == "Jakarta", "Was expecting Jakarta, but got \(String(describing: citiesDict["Indonesia"]))")
+citiesDict = ["Indonesia": "Jakarta"]
+
+assert(citiesDict["Indonesia"] == "Jakarta", "Was expecting Jakarta, but got \(String(describing: citiesDict["Indonesia"]))")
 
 // Question 3
 
@@ -80,17 +85,21 @@ var authorScores = [String: Double] ()
 
 // Your code here
 
-//assert(authorScores["Mark Twain"] == 8.9, "Was expecting 8.9, but got \(String(describing: authorScores["Mark Twain"]))")
-//assert(authorScores["Nathaniel Hawthorne"] == 5.1, "Was expecting 5.1, but got \(String(describing: authorScores["Nathaniel Hawthorne"]))")
-//assert(authorScores["John Steinbeck"] == 2.3, "Was expecting 2.3, but got \(String(describing: authorScores["John Steinbeck"]))")
-//assert(authorScores["C.S. Lewis"] == 9.9, "Was expecting 9.9, but got \(String(describing: authorScores["C.S. Lewis"]))")
-//assert(authorScores["Jon Krakauer"] == 6.1, "Was expecting 6.1, but got \(String(describing: authorScores["Jon Krakauer"]))")
+authorScores = ["Mark Twain": 8.9, "Nathaniel Hawthorne": 5.1, "John Steinbeck": 2.3, "C.S. Lewis": 9.9, "Jon Krakauer": 6.1]
+
+assert(authorScores["Mark Twain"] == 8.9, "Was expecting 8.9, but got \(String(describing: authorScores["Mark Twain"]))")
+assert(authorScores["Nathaniel Hawthorne"] == 5.1, "Was expecting 5.1, but got \(String(describing: authorScores["Nathaniel Hawthorne"]))")
+assert(authorScores["John Steinbeck"] == 2.3, "Was expecting 2.3, but got \(String(describing: authorScores["John Steinbeck"]))")
+assert(authorScores["C.S. Lewis"] == 9.9, "Was expecting 9.9, but got \(String(describing: authorScores["C.S. Lewis"]))")
+assert(authorScores["Jon Krakauer"] == 6.1, "Was expecting 6.1, but got \(String(describing: authorScores["Jon Krakauer"]))")
 
 
 
 // b. Add an additional author named “Erik Larson” with an assigned score of 9.2.
 
-//assert(authorScores["Erik Larson"] == 9.2, "Was expecting 9.2, but got \(authorScores["Erik Larson"])")
+authorScores = ["Erik Larson": 9.2]
+
+assert(authorScores["Erik Larson"] == 9.2, "Was expecting 9.2, but got \(authorScores["Erik Larson"])")
 
 
 // Question Four
